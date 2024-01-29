@@ -1,5 +1,5 @@
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
-@import 'https://fonts.googleapis.com/css?family=Allura|Merriweather+Sans:400,700,800';
+@import "https://fonts.googleapis.com/css?family=Allura|Merriweather+Sans:400,700,800";
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -146,9 +146,9 @@ select {
 }
 
 button,
-html input[type=button],
-input[type=reset],
-input[type=submit] {
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
   -webkit-appearance: button;
   cursor: pointer;
 }
@@ -168,26 +168,26 @@ input {
   line-height: normal;
 }
 
-input[type=checkbox],
-input[type=radio] {
+input[type="checkbox"],
+input[type="radio"] {
   box-sizing: border-box;
   padding: 0;
 }
 
-input[type=number]::-webkit-inner-spin-button,
-input[type=number]::-webkit-outer-spin-button {
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
   height: auto;
 }
 
-input[type=search] {
+input[type="search"] {
   -webkit-appearance: textfield;
   -moz-box-sizing: content-box;
   -webkit-box-sizing: content-box;
   box-sizing: content-box;
 }
 
-input[type=search]::-webkit-search-cancel-button,
-input[type=search]::-webkit-search-decoration {
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
@@ -231,8 +231,17 @@ body {
   overflow-x: hidden;
 }
 
-.gigantic, .huge, .large, .bigger, .big,
-h1, h2, h3, h4, h5, h6 {
+.gigantic,
+.huge,
+.large,
+.bigger,
+.big,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   color: #222;
   font-weight: bold;
 }
@@ -243,28 +252,33 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: -2px;
 }
 
-.huge, h1 {
+.huge,
+h1 {
   font-size: 68px;
   line-height: 1.05;
   letter-spacing: -1px;
 }
 
-.large, h2 {
+.large,
+h2 {
   font-size: 42px;
   line-height: 1.14;
 }
 
-.bigger, h3 {
+.bigger,
+h3 {
   font-size: 26px;
   line-height: 1.38;
 }
 
-.big, h4 {
+.big,
+h4 {
   font-size: 22px;
   line-height: 1.38;
 }
 
-.small, small {
+.small,
+small {
   font-size: 10px;
   line-height: 1.2;
 }
@@ -290,7 +304,7 @@ hr {
 }
 
 ::selection {
-  background: #FFF498;
+  background: #fff498;
 }
 
 img::selection {
@@ -298,7 +312,7 @@ img::selection {
 }
 
 body {
-  -webkit-tap-highlight-color: #FFF498;
+  -webkit-tap-highlight-color: #fff498;
 }
 
 .no-margin {
@@ -335,7 +349,9 @@ textarea {
   font-style: italic;
 }
 
-.wrapper, .wrapper--large, .wrapper--small {
+.wrapper,
+.wrapper--large,
+.wrapper--small {
   position: relative;
   max-width: 90%;
   height: 100%;
@@ -364,6 +380,10 @@ textarea {
 .splashscreen--is-hidden {
   opacity: 0;
 }
+.splashscreen--is-not-displayed {
+  display: none;
+}
+
 .splashscreen--is-hidden .preloader {
   opacity: 0;
 }
@@ -421,9 +441,9 @@ textarea {
 
 .button,
 button,
-input[type=submit],
-input[type=reset],
-input[type=button] {
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
   display: inline-block;
   padding: 5px 25px;
   color: #853f98;
@@ -435,19 +455,21 @@ input[type=button] {
   cursor: pointer;
   transition: 0.2s all ease-in-out;
 }
-.button:hover, .button:active, .button:focus,
+.button:hover,
+.button:active,
+.button:focus,
 button:hover,
 button:active,
 button:focus,
-input[type=submit]:hover,
-input[type=submit]:active,
-input[type=submit]:focus,
-input[type=reset]:hover,
-input[type=reset]:active,
-input[type=reset]:focus,
-input[type=button]:hover,
-input[type=button]:active,
-input[type=button]:focus {
+input[type="submit"]:hover,
+input[type="submit"]:active,
+input[type="submit"]:focus,
+input[type="reset"]:hover,
+input[type="reset"]:active,
+input[type="reset"]:focus,
+input[type="button"]:hover,
+input[type="button"]:active,
+input[type="button"]:focus {
   color: #ac65bf;
   border-color: #ac65bf;
 }
@@ -1187,7 +1209,8 @@ input[type=button]:focus {
   border: 1px solid #9e9e9e;
   border-radius: 3px;
 }
-.contact__form-el--name, .contact__form-el--email {
+.contact__form-el--name,
+.contact__form-el--email {
   width: 45%;
   height: 50px;
 }
@@ -1198,7 +1221,7 @@ input[type=button]:focus {
   padding-top: 15px;
   resize: none;
 }
-.contact__form input[type=submit] {
+.contact__form input[type="submit"] {
   margin-left: auto;
   padding: 10px 50px;
 }
@@ -1232,7 +1255,8 @@ input[type=button]:focus {
   .contact__heading {
     font-size: 32px;
   }
-  .contact__form-el--name, .contact__form-el--email {
+  .contact__form-el--name,
+  .contact__form-el--email {
     width: 100%;
   }
   .contact__form-el--name {
@@ -1253,7 +1277,8 @@ input[type=button]:focus {
     max-width: 100%;
     padding: 0;
   }
-  .contact__form-el--name, .contact__form-el--email {
+  .contact__form-el--name,
+  .contact__form-el--email {
     height: 40px;
   }
   .contact__form-el--message {
