@@ -1,0 +1,15 @@
+{
+  "name": "design-portfolio",
+  "version": "1.0.0",
+  "description": "Personal is a modern and bold website template suited perfectly for a UI/UX Design professional's portfolio.",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "lite-server"
+  },
+  "author": "Irina Mityugova",
+  "license": "ISC",
+  "devDependencies": {
+    "lite-server": "^2.6.1"
+  }
+}
