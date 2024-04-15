@@ -1,4 +1,9 @@
-(function loadPage() {
+loadPage();
+secretUnicorn();
+responsiveNav();
+
+/***************** Splash Screen ******************/
+function loadPage() {
   let splash = document.getElementsByClassName("splashscreen")[0];
   setTimeout(() => {
     splash.classList.add("splashscreen--is-hidden");
@@ -6,53 +11,57 @@
       splash.classList.add("splashscreen--is-not-displayed");
     }, 300);
   }, 500);
-})();
+}
 
-var canvas = document.getElementById("bridge");
-var ctx = canvas.getContext("2d"),
-  img = new Image(),
-  radius = 70;
+/***************** Secret Unicorn ******************/
+function secretUnicorn() {
+  let canvas = document.getElementById("bridge");
+  let ctx = canvas.getContext("2d"),
+    img = new Image(),
+    radius = 120;
 
-img.onload = setup;
-img.src =
-  "https://github.com/irinamityugova/design-portfolio/blob/master/assets/img/unicorn-1.png?raw=true";
+  img.onload = setup;
+  img.src =
+    "https://github.com/irinamityugova/design-portfolio/blob/master/assets/img/unicorn-1.png?raw=true";
 
-function setup() {
-  // set image as pattern for strokeStyle
-  let pattern = ctx.createPattern(this, "no-repeat");
-  ctx.strokeStyle = pattern;
-  ctx.lineWidth = 120;
+  function setup() {
+    // set image as pattern for strokeStyle
+    let pattern = ctx.createPattern(this, "no-repeat");
+    ctx.strokeStyle = pattern;
+    ctx.lineWidth = radius;
 
-  // for demo only, reveals image while mousing over canvas
-  canvas.onmousemove = function (e) {
-    var r = this.getBoundingClientRect(),
-      x = e.clientX - r.left,
-      y = e.clientY - r.top;
+    // for demo only, reveals image while mousing over canvas
+    canvas.onmousemove = function (e) {
+      var r = this.getBoundingClientRect(),
+        x = e.clientX - r.left,
+        y = e.clientY - r.top;
 
-    ctx.beginPath();
-    ctx.moveTo(x + Math.random() * 33 - 16, y + Math.random() * 33 - 16);
-    ctx.lineTo(x + Math.random() * 33 - 16, y + Math.random() * 33 - 16);
-    ctx.stroke();
-  };
+      ctx.beginPath();
+      ctx.moveTo(x + Math.random() * 33 - 16, y + Math.random() * 33 - 16);
+      ctx.lineTo(x + Math.random() * 33 - 16, y + Math.random() * 33 - 16);
+      ctx.stroke();
+    };
+  }
 }
 
 /***************** Responsive Nav ******************/
+function responsiveNav() {
+  let burger = document.getElementsByClassName("navigation__burger")[0];
+  let container = document.getElementsByClassName("navigation__container")[0];
+  let html = document.getElementsByTagName("html")[0];
+  let body = document.getElementsByTagName("body")[0];
 
-let burger = document.getElementsByClassName("navigation__burger")[0];
-let container = document.getElementsByClassName("navigation__container")[0];
-let html = document.getElementsByTagName("html")[0];
-let body = document.getElementsByTagName("body")[0];
+  burger.addEventListener("click", function () {
+    navigationToggle();
+  });
 
-burger.addEventListener("click", function () {
-  navigationToggle();
-});
-
-function navigationToggle() {
-  container.classList.toggle("navigation__container--is-open");
-  burger.classList.toggle("navigation__burger--is-open");
-  container.classList.toggle("navigation__container");
-  html.classList.toggle("scroll-lock");
-  body.classList.toggle("scroll-lock");
+  function navigationToggle() {
+    container.classList.toggle("navigation__container--is-open");
+    burger.classList.toggle("navigation__burger--is-open");
+    container.classList.toggle("navigation__container");
+    html.classList.toggle("scroll-lock");
+    body.classList.toggle("scroll-lock");
+  }
 }
 
 // /***************** Smooth Scroll ******************/
