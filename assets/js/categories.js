@@ -85,7 +85,7 @@ class Project {
       case "Case Study":
       case "Brand Review":
       case "Details":
-        this.link = `./assets/cases/${id}/#${this.type.toLowerCase()}`;
+        this.link = `./assets/cases/${id}.html#${this.type.toLowerCase()}`;
         break;
       case "Website":
         this.link = link;
