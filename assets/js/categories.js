@@ -74,7 +74,11 @@ class Project {
     this.id = id;
     this.title = title;
     this.client = client;
-    this.clientURL = clientURL;
+    if (clientURL.startsWith("https://")) {
+      this.clientURL = clientURL;
+    } else {
+      this.clientURL = `https://${clientURL}/`;
+    }
     this.date = date;
     this.description = description;
     this.featured = [];
@@ -88,7 +92,7 @@ class Project {
         this.link = `./assets/cases/${id}.html#${this.type.toLowerCase()}`;
         break;
       case "Website":
-        this.link = link;
+        this.link = `https://${link}/`;
     }
   }
   setFeatured(...references) {
@@ -204,6 +208,15 @@ cards.addProjects(
     "Case Study"
   ),
   new BusinessCard(
+    "DarkMode",
+    "Business Cards for a Developer",
+    "DarkMode Devs",
+    "Driven by technological perfection, this innpvative development startup is at the forefront of building and advancing software and apps of the future.",
+    "April 2023",
+    "darkmodedevs.com",
+    "Brand Review"
+  ),
+  new BusinessCard(
     "AllThingsClean",
     "Business Card Redesign",
     "All Things Clean",
@@ -213,7 +226,7 @@ cards.addProjects(
     "Case Study"
   ),
   new BusinessCard(
-    "DJZvergul",
+    "DJZwergul",
     "Business Cards for a Music Producer",
     "DJ Zvergul",
     "With his adoration for his puppy, DJ Zvergul is an all-rounded music producer with pieces of different genres.",
@@ -238,6 +251,15 @@ cards.addProjects(
     "April 2019",
     "garypaulmartinez.com",
     "Website"
+  ),
+  new BusinessCard(
+    "KomKell",
+    "Business Cards for a Cooling Solutions Experts",
+    "KomKell",
+    "Importing cristalized surface coats and installing misting systems, KomKell leaves an impression of protection from all swirms of the California summer heat.",
+    "April 2019",
+    "https://www.yelp.com/biz/komkell-cooling-solutions-santa-clara",
+    "Yelp Reviews"
   )
 );
 
@@ -291,7 +313,7 @@ apparels.addProjects(
     "Royal Rangers",
     "With roots in Greek Mythology, Royal Rangers combines prestige luxury with traditional roots and makes the embroidary easy to wear for both, casual and formal occasions. ",
     "April 2021",
-    "https://www.zazzle.com/royal_rangers_embroidery_t_shirt-256719244890865022",
+    "www.zazzle.com/royal_rangers_embroidery_t_shirt-256719244890865022",
     "Case Study"
   ),
   new Apparel(
