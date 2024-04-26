@@ -1,13 +1,15 @@
+let section = document.getElementById("projects");
+let popup = section.querySelector("#popup");
+
 function loadProjects() {
-  let section = document.getElementById("projects");
   let links = section.querySelectorAll("a");
   display(selectProjects("logo"));
 
   links.forEach((a) => {
-    a.addEventListener("click", clickHandler);
+    a.addEventListener("click", setActive);
   });
 
-  function clickHandler(event) {
+  function setActive(event) {
     let a = event.currentTarget;
     let category = a.innerText.toLowerCase();
     let selected = selectProjects(category);
@@ -22,15 +24,37 @@ function loadProjects() {
 
   function display(selected) {
     let container = section.querySelector("#projects-container");
-    let html = "";
     for (let id in selected) {
       let project = selected[id];
-      let projectCard = `<div class='card'>
-      <div style="background-image: url('${project.image}')" class='project-img'></div>
-      </div>`;
-      html += projectCard;
+      let projectCard = document.createElement("div");
+      projectCard.classList.add("card");
+      container.appendChild(projectCard);
+      let details = `
+      <div style="background-image: url('${project.image}')" class='project-img'>
+        <div id="${project.image}" class="hover-overlay flex dark">
+        <div style="padding: 10px">
+          <p>${project.date}</p>
+          <p><strong>${project.title}</strong>, <br /><a href="${project.clientURL}" target="_blank">${project.client}</a></p>
+          <p>${project.description}</p>
+          <!--<button onclick="location.href='${project.link}';">${project.linkName}</button>-->
+        </div>
+        </div>
+      </div>
+      `;
+      projectCard.innerHTML = details;
+      container.appendChild(projectCard);
+
+      projectCard.addEventListener("click", (e) =>
+        togglePopup(e, project.image)
+      );
     }
-    container.innerHTML = html;
+    popup.addEventListener("click", (e) => togglePopup());
+
+    function togglePopup(e, image) {
+      popup.classList.toggle("hidden");
+      let html = `<div style="background-image: url('${image}')" class='project-img'></div>`;
+      popup.innerHTML = html;
+    }
   }
 
   function selectProjects(category) {
