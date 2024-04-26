@@ -6,9 +6,9 @@ responsiveNav();
 function loadPage() {
   let splash = document.getElementsByClassName("splashscreen")[0];
   setTimeout(() => {
-    splash.classList.add("splashscreen--is-hidden");
+    splash.classList.add("hidden");
     setTimeout(() => {
-      splash.classList.add("splashscreen--is-not-displayed");
+      splash.classList.add("not-displayed");
     }, 300);
   }, 500);
 }
