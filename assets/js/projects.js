@@ -1,5 +1,14 @@
 let section = document.getElementById("projects");
 let popup = section.querySelector("#popup");
+popup.addEventListener("click", (e) => popup.classList.add("not-displayed"));
+
+function displayPopup(e, image) {
+  popup.classList.remove("not-displayed");
+  let html = `<div style="background-image: url('${image}')" class='project-img'></div>`;
+  popup.innerHTML = html;
+  let imageContainer = popup.querySelectorAll(".project-img")[0];
+  imageContainer.classList.add("fadeIn");
+}
 
 function loadProjects() {
   let links = section.querySelectorAll("a");
@@ -24,11 +33,11 @@ function loadProjects() {
 
   function display(selected) {
     let container = section.querySelector("#projects-container");
+    container.innerHTML = "";
     for (let id in selected) {
       let project = selected[id];
       let projectCard = document.createElement("div");
       projectCard.classList.add("card");
-      container.appendChild(projectCard);
       let details = `
       <div style="background-image: url('${project.image}')" class='project-img'>
         <div id="${project.image}" class="hover-overlay flex dark">
@@ -45,15 +54,8 @@ function loadProjects() {
       container.appendChild(projectCard);
 
       projectCard.addEventListener("click", (e) =>
-        togglePopup(e, project.image)
+        displayPopup(e, project.image)
       );
-    }
-    popup.addEventListener("click", (e) => togglePopup());
-
-    function togglePopup(e, image) {
-      popup.classList.toggle("hidden");
-      let html = `<div style="background-image: url('${image}')" class='project-img'></div>`;
-      popup.innerHTML = html;
     }
   }
 

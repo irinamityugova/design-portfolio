@@ -80,7 +80,7 @@ button,
 html input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-  -webkit-appearance: button;
+  appearance: button;
   cursor: pointer;
 }
 
@@ -297,10 +297,6 @@ textarea {
   flex-wrap: wrap;
 }
 
-.hidden {
-  display: none;
-}
-
 #categories {
   padding: 10px 0;
 }
@@ -318,14 +314,15 @@ textarea {
   z-index: 100;
   transition: opacity 0.4s 0.4s;
 }
-.splashscreen--is-hidden {
+
+.hidden {
   opacity: 0;
 }
-.splashscreen--is-not-displayed {
+.not-displayed {
   display: none;
 }
 
-.splashscreen--is-hidden .preloader {
+.hidden .preloader {
   opacity: 0;
 }
 
@@ -756,6 +753,8 @@ li a:hover {
   height: inherit;
   background-size: cover;
   background-position: center;
+  animation: scaleUp;
+  animation-duration: 0.4s;
 }
 
 .hover-overlay {
@@ -779,6 +778,7 @@ li a:hover {
   height: 100vh;
   width: 100vw;
   background-color: rgba(255, 255, 255, 0.3);
+  z-index: 2;
 }
 
 #popup .project-img {
@@ -791,6 +791,11 @@ li a:hover {
   height: 200px;
   min-width: 200px;
   background-color: var(--light-gray);
+}
+
+@media (max-width: 480px) {
+  .card, .hover-overlay {
+    width: 100%;
 }
 
 /************************* Contact *************************/
