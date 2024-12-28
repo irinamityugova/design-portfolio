@@ -12,7 +12,7 @@ function displayPopup(e, image) {
 
 function loadProjects() {
   let links = section.querySelectorAll("a");
-  display(selectProjects("logo"));
+  display(selectProjects("all"));
 
   links.forEach((a) => {
     a.addEventListener("click", setActive);
@@ -60,6 +60,13 @@ function loadProjects() {
   }
 
   function selectProjects(category) {
+    if (category === "all") {
+      let projects = {};
+      for (let category in Collection.categories) {
+        Object.assign(projects, Collection.categories[category]);
+      }
+      return projects;
+    }
     return Collection.categories[category];
   }
 }
