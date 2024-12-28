@@ -39,7 +39,7 @@ function loadProjects() {
       let projectCard = document.createElement("div");
       projectCard.classList.add("card");
       let details = "";
-      if (project.linkName === "Website") {
+      if (project.linkName === "Website" || project.linkName === "Figma") {
         details = `
         <div style="background-image: url('${project.image}')" class='project-img'>
           <div id="${project.image}" class="hover-overlay flex dark">
