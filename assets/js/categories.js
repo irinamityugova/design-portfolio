@@ -426,15 +426,6 @@ class Website extends Project {}
 let websites = new Collection("website");
 websites.addProjects(
   new Website(
-    "LAEC",
-    "WordPress Website for a Non-Profit",
-    "Legal Advocacy and Education Comission",
-    "Hosted on SiteGround and built with the Elementor Theme in collaboration with a front-end developer, this website, the graphic assets and the layout components have been carefully considered and implemented.",
-    "September 2023",
-    "thelaec.org",
-    "Website"
-  ),
-  new Website(
     "ShakingCups",
     "Shaking Cups Web App",
     "DarkMode Devs",
