@@ -10,8 +10,8 @@ Collection {
       clientURL: "direct url",
       date: "month year",
       desctiption: "",
-      link: "relative path",
       linkName: "",
+      link: "relative path",
       type: constructor name,
       featured: [], // same id by default
     } 
@@ -450,8 +450,9 @@ websites.addProjects(
     "Fernando Gonzalez",
     "As an open door to SEO, financial consultant Fernando needed a page that gets indexed on the web to promote his services. As a result of hosting his website on Google Sites, he reached a thousand unique visits 60 days after deployment.",
     "February 2024",
-    "bucks4biz.com",
-    "Website"
+    "https://www.alignable.com/phoenix-az/bucks-4-biz",
+    "Website",
+    "https://sites.google.com/view/bucks4biz/home"
   ),
   new Website(
     "DarkMode",
