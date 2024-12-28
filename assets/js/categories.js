@@ -381,13 +381,14 @@ class UiUx extends Project {}
 let uiuxs = new Collection("ui ux");
 uiuxs.addProjects(
   new UiUx(
-    "DarkMode",
-    "Social Media Posts",
+    "CodefitAI",
+    "Codefit AI App UI Components",
     "DarkMode Devs",
-    "Featuring events, programs, offers and deals to raise following and views of a development agency.",
-    "January 2024",
+    "AI mentorship platform for digital learners",
+    "March 2024",
     "darkmodedevs.com",
-    "Details"
+    "Figma",
+    "https://www.figma.com/proto/vYQ5Jtt5pryFDllARh2G9A/CodeFit_AI.js?node-id=0-1&t=dPyS1vSnRxJUNQKJ-1"
   ),
   new UiUx(
     "ShakingCups",
