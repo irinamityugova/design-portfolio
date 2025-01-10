@@ -681,8 +681,6 @@ li a:hover {
   position: relative;
 }
 .about__content-signature {
-  position: absolute;
-  left: 0;
   font-size: 30px;
   font-family: "Allura", cursive;
 }
