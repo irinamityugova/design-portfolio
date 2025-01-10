@@ -38,35 +38,12 @@ function loadProjects() {
       let project = selected[id];
       let projectCard = document.createElement("div");
       projectCard.classList.add("card");
-      let details = "";
-      if (project.linkName === "Website" || project.linkName === "Figma") {
-        details = `
-        <div style="background-image: url('${project.image}')" class='project-img'>
-          <div id="${project.image}" class="hover-overlay flex dark">
-          <div style="padding: 10px">
-            <p>${project.date}</p>
-            <p><strong>${project.title}</strong>, <br /><a href="${project.clientURL}" target="_blank">${project.client}</a></p>
-            <p>${project.description}</p>
-            <a class="button" target="_blank" href='${project.link}'">${project.linkName}</a>
+      projectCard.innerHTML = `<div style="background-image: url('${project.image}')" class='project-img'>
+          <div id="${project.image}" class="hover-overlay flex center light">
+            <strong>${project.title}</strong>
           </div>
           </div>
-        </div>
-        `;
-      } else {
-        details = `
-        <div style="background-image: url('${project.image}')" class='project-img'>
-          <div id="${project.image}" class="hover-overlay flex dark">
-          <div style="padding: 10px">
-            <p>${project.date}</p>
-            <p><strong>${project.title}</strong>, <br /><a href="${project.clientURL}" target="_blank">${project.client}</a></p>
-            <p>${project.description}</p>
-          </div>
-          </div>
-        </div>
-        `;
-      }
-
-      projectCard.innerHTML = details;
+        </div>`;
       container.appendChild(projectCard);
 
       projectCard.addEventListener("click", (e) =>
