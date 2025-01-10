@@ -18,17 +18,25 @@ function loadProjects() {
     a.addEventListener("click", setActive);
   });
 
+  let dropdown = document.getElementById("dropdown");
+  dropdown.addEventListener("change", setActive);
+
   function setActive(event) {
-    let a = event.currentTarget;
-    let category = a.innerText.toLowerCase();
-    let selected = selectProjects(category);
+    let category;
 
-    links.forEach((a) => {
-      a.classList.remove("active");
-    });
+    if (event.target.id === "dropdown") {
+      category = event.target.value.toLowerCase();
+    } else {
+      let a = event.currentTarget;
+      category = a.innerText.toLowerCase();
 
-    a.classList.toggle("active");
-    display(selected);
+      links.forEach((a) => {
+        a.classList.remove("active");
+      });
+
+      a.classList.toggle("active");
+    }
+    display(selectProjects(category));
   }
 
   function display(selected) {

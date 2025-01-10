@@ -70,7 +70,10 @@
               <h2 class="blurb__heading">Everything is<br />possible</h2>
               <p class="blurb__copy no-margin">You just got to be a unicorn</p>
               <p class="about__content-signature">Irina Mityugova</p>
-              <button onclick="location.href = './pages/calendar.html';">
+              <button
+                class="about__action-button"
+                onclick="location.href = './pages/calendar.html';"
+              >
                 Let's Chat
               </button>
             </div>
@@ -88,8 +91,8 @@
       <!-- END SECTION: About -->
       <!-- SECTION: Projects -->
       <section id="projects" class="wrapper--large">
-        <div id="categories" class="">
-          <ul class="flex">
+        <div id="categories">
+          <ul id="list" class="flex">
             <li><a>Logo</a></li>
             <li><a>Brochure</a></li>
             <li><a>Business Card</a></li>
@@ -99,14 +102,14 @@
             <li><a>UI UX</a></li>
             <li><a>Website</a></li>
           </ul>
-          <select id="dropdown" class="dropdown not-displayed">
+          <select id="dropdown">
             <option>Logo</option>
             <option>Brochure</option>
             <option>Business Card</option>
             <option>Presentation</option>
             <option>Apparel</option>
             <option>Social Media</option>
-            <option>UI/UX</option>
+            <option>UI UX</option>
             <option>Website</option>
           </select>
         </div>
