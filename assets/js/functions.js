@@ -1,16 +1,20 @@
-loadPage();
-secretUnicorn();
-responsiveNav();
-
+window.onload = loadPage;
 /***************** Splash Screen ******************/
 function loadPage() {
   let splash = document.getElementsByClassName("splashscreen")[0];
   setTimeout(() => {
     splash.classList.add("hidden");
+    responsiveNav();
     setTimeout(() => {
       splash.classList.add("not-displayed");
     }, 300);
   }, 500);
+}
+
+function isMobileDevice() {
+  return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+    navigator.userAgent
+  );
 }
 
 /***************** Secret Unicorn ******************/
