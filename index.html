@@ -16,6 +16,7 @@
     <meta name="googlebot" content="index,follow" />
     <meta name="author" content="Irina Mityugova" />
     <link rel="stylesheet" href="./assets/css/main.css" />
+    <script type="text/javascript" src="./assets/js/functions.js"></script>
   </head>
   <body>
     <h1 id="SEO-Heading" style="display: none">
@@ -151,7 +152,11 @@
       </div>
     </footer>
     <!-- END SECTION: Footer -->
-    <script src="assets/js/functions.js"></script>
+    <script type="text/javascript">
+      if (!isMobileDevice()) {
+        secretUnicorn();
+      }
+    </script>
     <script src="assets/js/categories.js"></script>
     <script src="assets/js/projects.js"></script>
 
