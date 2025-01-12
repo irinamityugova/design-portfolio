@@ -26,7 +26,7 @@ function secretUnicorn() {
 
   img.onload = setup;
   img.src =
-    "https://github.com/irinamityugova/design-portfolio/blob/master/assets/img/unicorn-1.png?raw=true";
+    "https://github.com/irinamityugova/design-portfolio/blob/master/assets/img/unicorn-2-real.png?raw=true";
 
   function setup() {
     // set image as pattern for strokeStyle
