@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Graphic Designer Portfolio - Irina Mityugova</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Hire an experienced graphic designer for logos, business cards, flyers, brochures, posters, social media posts, web design, UI/UX design and more."
+    />
+    <meta
+      name="keywords"
+      content="graphic design portfolio, graphic designer, experienced graphic designer, graphic designer in Tucson Arizona, Tucson Arizona professionals, Arizona graphic designer, best graphic designers near me, Irina, Mityugova, creative, web, logo designer, presentation designer, design business cards, design a flyer, logos, business cards, flyers, brochures, posters, social media posts, web design, UI/UX design"
+    />
+    <meta name="robots" content="index,follow" />
+    <meta name="googlebot" content="index,follow" />
+    <meta name="author" content="Irina Mityugova" />
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <script type="text/javascript" src="./assets/js/functions.js"></script>
+  </head>
+  <body>
+    <h1 id="SEO-Heading" style="display: none">
+      Experienced graphic designer for logos, business cards, flyers, brochures,
+      posters, social media posts, web design, UI/UX design and more.
+    </h1>
+    <!-- SECTION: Splashscreen -->
+    <div class="splashscreen">
+      <div class="preloader">
+        <span class="preloader__text">Loading</span>
+      </div>
+    </div>
+    <!-- END SECTION: Splashscreen -->
+
+    <!-- SECTION: Navigation -->
+    <navigation id="top" class="navigation">
+      <div class="navigation__wrapper wrapper--large">
+        <a class="navigation__logo logo" href="#"
+          ><img
+            class="logo"
+            src="assets/img/BestLogo.png"
+            style="width: 55px"
+            alt="Unicorn Logo"
+        /></a>
+        <nav class="navigation__container">
+          <ul class="navigation__list">
+            <li><a href="../../calendar.html">Book a Meeting</a></li>
+            <li>
+              <a href="tel:5203440353">1(520)344-0353</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="navigation__burger">
+          <span class="navigation__burger-el navigation__burger-el--top"></span>
+          <span
+            class="navigation__burger-el navigation__burger-el--middle"
+          ></span>
+          <span
+            class="navigation__burger-el navigation__burger-el--bottom"
+          ></span>
+        </div>
+      </div>
+    </navigation>
+    <!-- END SECTION: Navigation -->
+
+    <main role="main">
+      <!-- SECTION: About -->
+      <div class="about">
+        <div class="about__wrapper wrapper--small">
+          <div class="about__content">
+            <div class="about__content-blurb blurb blurb--framed">
+              <h2 class="blurb__heading">Everything is<br />possible</h2>
+              <p class="blurb__copy no-margin">You just got to be a unicorn</p>
+              <p class="about__content-signature">Irina Mityugova</p>
+              <button
+                class="about__action-button"
+                onclick="location.href = './calendar.html';"
+              >
+                Let's Chat
+              </button>
+            </div>
+          </div>
+          <figure class="about__visual">
+            <canvas
+              id="bridge"
+              height="436px"
+              width="532px"
+              alt="Hidden unicorn illustration"
+            ></canvas>
+          </figure>
+        </div>
+      </div>
+      <!-- END SECTION: About -->
+      <!-- SECTION: Projects -->
+      <section id="projects" class="wrapper--large">
+        <div id="categories">
+          <ul id="list" class="flex">
+            <li><a>Logo</a></li>
+            <li><a>Brochure</a></li>
+            <li><a>Business Card</a></li>
+            <li><a>Presentation</a></li>
+            <li><a>Apparel</a></li>
+            <li><a>Social Media</a></li>
+            <li><a>UI UX</a></li>
+            <li><a>Website</a></li>
+          </ul>
+          <select id="dropdown">
+            <option>Logo</option>
+            <option>Brochure</option>
+            <option>Business Card</option>
+            <option>Presentation</option>
+            <option>Apparel</option>
+            <option>Social Media</option>
+            <option>UI UX</option>
+            <option>Website</option>
+          </select>
+        </div>
+        <div id="projects-container" class="flex left wrap">
+          <!--Filtered via projects.js-->
+        </div>
+        <div id="popup" class="not-displayed">
+          <!--Populated on .hover-overlay via click displayPopup(image)-->
+        </div>
+      </section>
+    </main>
+    <!-- SECTION: Footer -->
+    <footer class="footer">
+      <div class="footer__wrapper wrapper--large">
+        <p class="footer__copyright no-margin">&copy; 2025 Irina Mityugova</p>
+        <!-- <a class="footer__logo logo" href="#0"></a> -->
+        <a class="footer__arrow" href="#top">
+          <svg
+            class="footer__arrow-el"
+            xmlns="https://www.w3.org/2000/svg"
+            xmlns:xlink="https://www.w3.org/1999/xlink"
+            version="1.1"
+            id="Layer_1"
+            x="0"
+            y="0"
+            viewBox="0 0 130 65"
+            xml:space="preserve"
+            enable-background="new 0 0 130 65"
+          >
+            <g
+              transform="translate(0.000000,65.000000) scale(0.100000,-0.100000)"
+            >
+              <path
+                d="M315.4 365c-336-305-345-315-290-351 18-12 32-14 45-8 10 5 145 123 300 262l281 253 196-178c108-98 237-215 287-260 50-46 98-83 107-83s27 9 40 19c20 16 22 23 14 46 -12 33-623 585-647 585C638.4 650 489.4 522 315.4 365z"
+              />
+            </g>
+          </svg>
+        </a>
+      </div>
+    </footer>
+    <!-- END SECTION: Footer -->
+    <script type="text/javascript">
+      if (!isMobileDevice()) {
+        secretUnicorn();
+      }
+    </script>
+    <script src="assets/js/categories.js"></script>
+    <script src="assets/js/projects.js"></script>
+
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-R16JPVPEXE"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-R16JPVPEXE");
+    </script>
+  </body>
+</html>
