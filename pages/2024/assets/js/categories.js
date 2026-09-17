@@ -388,7 +388,7 @@ uiuxs.addProjects(
     "March 2024",
     "darkmodedevs.com",
     "Figma",
-    "www.figma.com/proto/vYQ5Jtt5pryFDllARh2G9A/CodeFit_AI.js?node-id=0-1&t=dPyS1vSnRxJUNQKJ-1"
+    "figma.com/proto/vYQ5Jtt5pryFDllARh2G9A/CodeFit_AI.js?node-id=0-1&t=dPyS1vSnRxJUNQKJ-1"
   ),
   new UiUx(
     "ShakingCups",
@@ -398,7 +398,7 @@ uiuxs.addProjects(
     "September 2023",
     "darkmodedevs.com",
     "Figma",
-    "www.figma.com/file/kJYstXxmjxIOTfFspRk9Ee/Shaking-Cups-Wireframe?type=design&node-id=0%3A1&mode=design&t=MVhQsDyJ4f8GMMKJ-1"
+    "figma.com/file/kJYstXxmjxIOTfFspRk9Ee/Shaking-Cups-Wireframe?type=design&node-id=0%3A1&mode=design&t=MVhQsDyJ4f8GMMKJ-1"
   ),
   new UiUx(
     "FairGame",
@@ -408,7 +408,7 @@ uiuxs.addProjects(
     "March 2024",
     "darkmodedevs.com",
     "Figma",
-    "www.figma.com/file/IGNietOQWw0kZKGW8p49mp/Fair-Game?type=design&mode=design&t=fSzk1N13sNdJgjsQ-1"
+    "figma.com/file/IGNietOQWw0kZKGW8p49mp/Fair-Game?type=design&mode=design&t=fSzk1N13sNdJgjsQ-1"
   ),
   new UiUx(
     "AzurAgency",

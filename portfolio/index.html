@@ -583,7 +583,8 @@
           if (LIVE_CASE_PAGES.has(project.id)) {
             modalActions.innerHTML += `<a class="button" href="${resolveAssetPath(project.link)}" target="_blank" rel="noopener">Read the full case study</a>`;
           }
-          if (project.linkName !== "Case Study" &&
+          if (project.link &&
+              project.linkName !== "Case Study" &&
               project.linkName !== "Brand Review" &&
               project.linkName !== "Details") {
             modalActions.innerHTML += `<a class="button" href="${project.link}" target="_blank" rel="noopener">${project.linkName}</a>`;
