@@ -388,7 +388,7 @@ uiuxs.addProjects(
     "March 2024",
     "darkmodedevs.com",
     "Figma",
-    "https://www.figma.com/proto/vYQ5Jtt5pryFDllARh2G9A/CodeFit_AI.js?node-id=0-1&t=dPyS1vSnRxJUNQKJ-1"
+    "www.figma.com/proto/vYQ5Jtt5pryFDllARh2G9A/CodeFit_AI.js?node-id=0-1&t=dPyS1vSnRxJUNQKJ-1"
   ),
   new UiUx(
     "ShakingCups",
@@ -398,7 +398,7 @@ uiuxs.addProjects(
     "September 2023",
     "darkmodedevs.com",
     "Figma",
-    "https://www.figma.com/file/kJYstXxmjxIOTfFspRk9Ee/Shaking-Cups-Wireframe?type=design&node-id=0%3A1&mode=design&t=MVhQsDyJ4f8GMMKJ-1"
+    "www.figma.com/file/kJYstXxmjxIOTfFspRk9Ee/Shaking-Cups-Wireframe?type=design&node-id=0%3A1&mode=design&t=MVhQsDyJ4f8GMMKJ-1"
   ),
   new UiUx(
     "FairGame",
@@ -408,7 +408,7 @@ uiuxs.addProjects(
     "March 2024",
     "darkmodedevs.com",
     "Figma",
-    "https://www.figma.com/file/IGNietOQWw0kZKGW8p49mp/Fair-Game?type=design&mode=design&t=fSzk1N13sNdJgjsQ-1"
+    "www.figma.com/file/IGNietOQWw0kZKGW8p49mp/Fair-Game?type=design&mode=design&t=fSzk1N13sNdJgjsQ-1"
   ),
   new UiUx(
     "AzurAgency",
@@ -418,7 +418,7 @@ uiuxs.addProjects(
     "March 2024",
     "azur-agency.org",
     "Miro Board",
-    "https://miro.com/app/board/uXjVN7t5Z2g=/?share_link_id=163486131541"
+    "miro.com/app/board/uXjVN7t5Z2g=/?share_link_id=163486131541"
   )
 );
 
@@ -450,9 +450,9 @@ websites.addProjects(
     "Fernando Gonzalez",
     "As an open door to SEO, financial consultant Fernando needed a page that gets indexed on the web to promote his services. As a result of hosting his website on Google Sites, he reached a thousand unique visits 60 days after deployment.",
     "February 2024",
-    "https://www.alignable.com/phoenix-az/bucks-4-biz",
+    "www.alignable.com/phoenix-az/bucks-4-biz",
     "Website",
-    "https://sites.google.com/view/bucks4biz/home"
+    "sites.google.com/view/bucks4biz"
   ),
   new Website(
     "DarkMode",
@@ -462,7 +462,7 @@ websites.addProjects(
     "February 2024",
     "darkmodedevs.com",
     "Website",
-    "https://sites.google.com/view/darkmode-mentorship/home"
+    "sites.google.com/view/darkmode-mentorship"
   ),
   new Website(
     "AzurAgency",
@@ -472,7 +472,7 @@ websites.addProjects(
     "January 2024",
     "azur-agency.org",
     "Website",
-    "azur-agency.org/about"
+    "azur-agency.org"
   )
 );
 
