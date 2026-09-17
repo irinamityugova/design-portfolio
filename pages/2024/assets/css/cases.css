@@ -1,0 +1,290 @@
+/* ============================================================
+   Case Studies – Floating Cards Layout
+   For irinamityugova.me/pages/2024/assets/cases/
+   ============================================================ */
+
+:root {
+  --card-radius: 18px;
+  --card-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+  --card-shadow-hover: 0 24px 60px rgba(0, 0, 0, 0.18);
+  --accent: #1a1a2e;
+  --accent-soft: #4a4a6a;
+  --bg: #f7f5f2;
+  --text: #1c1c1c;
+  --muted: #666;
+  --max-width: 920px;
+  --gap: 4.5rem;
+}
+
+/* ---------- Base ---------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.65;
+  overflow-x: hidden;
+}
+
+/* ---------- Navigation (keep original feel, lightly refined) ---------- */
+.navigation {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(247, 245, 242, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  padding: 0.75rem 0;
+}
+
+.navigation__wrapper {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navigation__list {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation__list a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: color 0.2s;
+}
+
+.navigation__list a:hover {
+  color: #000;
+}
+
+/* ---------- Main content ---------- */
+main {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 3rem 1.5rem 6rem;
+}
+
+main > h2.wrapper--large,
+main h2 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  margin: 0 0 1.25rem;
+  color: var(--accent);
+  line-height: 1.15;
+}
+
+/* Intro paragraph */
+main > section.wrapper--large:first-of-type,
+main > section:first-of-type {
+  margin-bottom: var(--gap);
+}
+
+main > section:first-of-type p {
+  font-size: 1.15rem;
+  color: var(--muted);
+  max-width: 640px;
+  margin: 0;
+}
+
+/* ---------- Project sections ---------- */
+main section.wrapper--large,
+main section {
+  margin-bottom: var(--gap);
+  position: relative;
+}
+
+main section h3 {
+  font-size: 1.35rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem;
+  color: var(--accent);
+  letter-spacing: -0.01em;
+}
+
+main section p {
+  color: var(--muted);
+  margin: 0 0 1.5rem;
+  max-width: 560px;
+  font-size: 1rem;
+}
+
+/* ---------- Floating image cards ---------- */
+img.visual {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--card-radius);
+  box-shadow: var(--card-shadow);
+  background: #fff;
+  transition:
+    transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform;
+  /* Default “resting” state */
+  transform: translateY(0) scale(1);
+}
+
+/* Hover lift */
+img.visual:hover {
+  transform: translateY(-12px) scale(1.015);
+  box-shadow: var(--card-shadow-hover);
+}
+
+/* ---------- Scroll-driven floating effect ---------- */
+/* Modern browsers: true parallax-style float as user scrolls */
+@supports (animation-timeline: scroll()) {
+  img.visual {
+    animation: floatCard linear both;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+  }
+
+  @keyframes floatCard {
+    from {
+      opacity: 0.55;
+      transform: translateY(48px) scale(0.97);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+}
+
+/* Fallback for older browsers: subtle sticky float */
+@supports not (animation-timeline: scroll()) {
+  img.visual {
+    position: relative;
+    top: 0;
+  }
+}
+
+/* Alternating slight horizontal offset for visual rhythm */
+main section:nth-of-type(odd) img.visual {
+  transform-origin: center left;
+}
+
+main section:nth-of-type(even) img.visual {
+  transform-origin: center right;
+}
+
+/* ---------- Links inside case studies ---------- */
+main a {
+  color: var(--accent);
+  font-weight: 500;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.2s;
+}
+
+main a:hover {
+  color: #000;
+}
+
+/* ---------- Footer ---------- */
+.footer {
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+  padding: 2rem 0;
+  background: #fff;
+}
+
+.footer__wrapper {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer__copyright {
+  font-size: 0.875rem;
+  color: var(--muted);
+  margin: 0;
+}
+
+.footer__arrow {
+  display: inline-flex;
+  color: var(--accent);
+  transition: transform 0.25s;
+}
+
+.footer__arrow:hover {
+  transform: translateY(-4px);
+}
+
+.footer__arrow-el {
+  width: 36px;
+  height: 18px;
+  fill: currentColor;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 640px) {
+  main {
+    padding: 2rem 1.15rem 4rem;
+  }
+
+  main > h2 {
+    font-size: 1.75rem;
+  }
+
+  main section h3 {
+    font-size: 1.2rem;
+  }
+
+  img.visual {
+    border-radius: 14px;
+  }
+
+  :root {
+    --gap: 3.25rem;
+  }
+}
+
+/* ---------- Optional: subtle page background texture ---------- */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+  background:
+    radial-gradient(ellipse 80% 50% at 20% 10%, rgba(255, 255, 255, 0.7), transparent),
+    radial-gradient(ellipse 60% 40% at 80% 80%, rgba(230, 225, 215, 0.5), transparent);
+}
+
+/* ---------- Print-friendly ---------- */
+@media print {
+  img.visual {
+    box-shadow: none;
+    transform: none !important;
+    animation: none !important;
+  }
+  .navigation,
+  .footer__arrow {
+    display: none;
+  }
+}
